@@ -9,8 +9,8 @@ import { shoppingListService } from '../shopping-list.service';
 })
 export class ShoppingEditComponent implements OnInit {
   constructor(private slService: shoppingListService) {}
-  @ViewChild('nameInput') nameInputRef: ElementRef | any;
-  @ViewChild('amountInput') amountInputRef: ElementRef | any;
+  @ViewChild('nameInput') nameInputRef!: ElementRef;
+  @ViewChild('amountInput') amountInputRef!: ElementRef;
   ngOnInit(): void {}
   onAddItem() {
     const newIng = new Ingredient(
