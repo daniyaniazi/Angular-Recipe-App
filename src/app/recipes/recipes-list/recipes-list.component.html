@@ -1,13 +1,14 @@
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn btn-success">New Recipe</div>
+    <div class="btn btn-success" (click)="onNew()">New Recipe</div>
   </div>
 </div>
 <hr />
 <div class="row">
   <div class="col-xs-12">
     <app-recipe-item
-      *ngFor="let recipeEL of recipies"
+      *ngFor="let recipeEL of recipies; let i = index"
+      [id]="i"
       [recipe]="recipeEL"
     ></app-recipe-item>
   </div>
