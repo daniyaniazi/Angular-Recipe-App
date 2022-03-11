@@ -2,26 +2,43 @@
   <div class="col-xs-12">
     <img [src]="recipe?.imagePath" alt="" srcset="" class="img-responsive" />
   </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>{{ recipe?.name }}</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="btn-group">
-        <button type="button" class="btn btn-primary dropdowm-toggle">
-          Manage Recipe <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#"> Add to shopping List </a></li>
-          <li><a href="#"> Delete </a></li>
-          <li><a href="#"> Edir Recipe </a></li>
-        </ul>
-      </div>
-    </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ recipe?.name }}</h1>
   </div>
 </div>
+<div appDropdown class="btn-group" role="group">
+  <button
+    id="btnGroupDrop1"
+    type="button"
+    class="btn btn-secondary dropdown-toggle"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="true"
+  >
+    Manage Recipe
+  </button>
+  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+    <a class="dropdown-item" href="#">To Shopping List</a>
+    <a class="dropdown-item" href="#">Edit Recipe</a>
+    <a class="dropdown-item" href="#">Delete Recipe</a>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group dropdown show">
+      <button type="button" class="btn btn-primary dropdown-toggle">
+        Manage Recipe <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu show">
+        <li><a href="#">To Shopping List</a></li>
+        <li><a href="#">Edit Recipe</a></li>
+        <li><a href="#">Delete Recipe</a></li>
+      </ul>
+    </div>
+  </div>
+</div> -->
 <div class="row">
   <div class="col-xs-12">{{ recipe?.description }}</div>
 </div>
