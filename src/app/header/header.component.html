@@ -22,7 +22,24 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown" appDropdown>
+      <div class="btn-group" role="group">
+        <button
+          id="btnGroupDrop1"
+          type="button"
+          class="btn dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="true"
+          appDropdown
+        >
+          Manage
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" (click)="onSave()">Save Data</a>
+          <a class="dropdown-item" (click)="onRecipe()">Fetch Data</a>
+        </div>
+      </div>
+      <!-- <li class="dropdown" appDropdown>
         <a appDropdown class="dropdown-toggle" role="button"
           >Manage <span class="caret"></span
         ></a>
@@ -30,7 +47,7 @@
           <a class="dropdown-item">Save Data</a>
           <a class="dropdown-item">Fetch Data</a>
         </ul>
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>
